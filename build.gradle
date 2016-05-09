@@ -4,8 +4,11 @@ android {
     lintOptions {
       abortOnError false
     }
-    compileSdkVersion 21
-    buildToolsVersion '21.1.2'
+    compileSdkVersion rootProject.ANDROID_SDK_VER
+    buildToolsVersion rootProject.ANDROID_BUILD_TOOLS_VER
+
+    useLibrary 'org.apache.http.legacy'  // https://www.pivotaltracker.com/story/show/119230957
+
     sourceSets {
         defaultConfig {
             testApplicationId 'com.android.volley.tests'
@@ -37,8 +40,3 @@ android {
 dependencies {
     compile fileTree(include: '*.jar', dir: 'libs')
 }
-
-
-
-
-
